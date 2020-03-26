@@ -5,7 +5,7 @@ import os
 from DBConnection import db
 
 
-def sensor_list(location='data/sensor_graph/adj_mx_bay_dcrnn.pkl'):
+def sensor_list(location='data/sensor_graph/adj_mx_bay_DCRNN.pkl'):
     return list(load_pickle(location)[0])
 
 

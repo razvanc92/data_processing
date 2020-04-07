@@ -49,6 +49,7 @@ def create_raw_table(name):
         query = query[:-2] + ')'
         db.execute_command(query, 'Successfully created d4_raw_table')
 
+
 def create_final_table(name):
     query = "SELECT NOT EXISTS (SELECT 1 FROM pg_tables WHERE tablename='{0}')".format(name)
     create_table = db.execute_query(query)[0][0]
@@ -59,7 +60,26 @@ def create_final_table(name):
                 'sensor_id numeric , '.format(name)
 
         for i in range(11):
-            query+= 'bucket_{} numeric, '.format(i)
+            query += 'bucket_{} numeric, '.format(i)
 
         query = query[:-2] + ')'
         db.execute_command(query, 'Successfully created d4_raw_table')
+
+
+def create_final_table_deterministic(name):
+    query = "SELECT NOT EXISTS (SELECT 1 FROM pg_tables WHERE tablename='{0}')".format(name)
+    create_table = db.execute_query(query)[0][0]
+
+    if create_table:
+        query = 'CREATE TABLE {0} (' \
+                'time VARCHAR (50), ' \
+                'sensor_id numeric , ' \
+                'speed numeric'.format(name)
+
+        query = query + ')'
+        db.execute_command(query, 'Successfully created d4_raw_table')
+
+
+def shuffle_along_axis(a, axis):
+    idx = np.random.rand(*a.shape).argsort(axis=axis)
+    return np.take_along_axis(a, idx, axis=axis)

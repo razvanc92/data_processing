@@ -32,7 +32,7 @@ db.execute_command('SET DATESTYLE TO MDY')
 #         "    pems_raw_sensor_data.cars_lane_2, " \
 #         "    pems_raw_sensor_data.speed_lane_2, " \
 #         "    pems_raw_sensor_data.cars_lane_3, " \
-#         "    pems_raw_sensor_data.speed_lane_3,•••••••••••• " \
+#         "    pems_raw_sensor_data.speed_lane_3,  " \
 #         "    pems_raw_sensor_data.cars_lane_4, " \
 #         "    pems_raw_sensor_data.speed_lane_4, " \
 #         "    pems_raw_sensor_data.cars_lane_5, " \

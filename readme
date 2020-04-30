@@ -6,6 +6,7 @@ data M no sensors:  87
 data L no sensors:  182
 
 For data forecasting:
+total number of time stamps: 25114
 5 minutes interevals
 data M no sensors:  87
 data L no sensors:  182

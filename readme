@@ -1,5 +1,11 @@
+For data imputation:
 total number of time stamps: 8404
 15 minutes intervals
 missing first 2 days and 0.5 days more
+data M no sensors:  87
+data L no sensors:  182
+
+For data forecasting:
+5 minutes interevals
 data M no sensors:  87
 data L no sensors:  182
